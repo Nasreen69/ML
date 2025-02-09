@@ -1,0 +1,37 @@
+import pandas as pd
+
+def create_features(data_df):
+    """
+    This method includes feature extraction of time series data.
+    """
+    df = data_df.copy()
+
+    # Ensure 'Time' column exists
+    if "Time" not in df.columns:
+        raise ValueError("Column 'Time' is missing in DataFrame")
+
+    # Convert 'Time' to datetime format
+    df["Time"] = pd.to_datetime(df["Time"], errors="coerce")
+
+    # Check if conversion was successful
+    if df["Time"].isna().any():
+        raise ValueError("Some values in 'Time' could not be converted to datetime")
+
+    # Extract datetime components
+    df["day"] = df["Time"].dt.day
+    df["quarter"] = df["Time"].dt.quarter
+    df["dayofyear"] = df["Time"].dt.dayofyear
+    df["weekofyear"] = df["Time"].dt.isocalendar().week
+    df["is_month_start"] = df["Time"].dt.is_month_start.astype(int)
+    df["is_quarter_end"] = df["Time"].dt.is_quarter_end.astype(int)
+
+    df["is_business_week"] = df["Time"].apply(lambda x: is_weekday(x))
+    df["is_8am_to_8pm"] = df["Time"].apply(lambda x: is8am_to_8pm(x))
+
+    df.drop(columns=["second"], errors="ignore", inplace=True)
+
+    df = apply_fourier_transform(df)
+
+    return df
+
+df_feat = create_features(df3)

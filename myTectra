@@ -1,0 +1,41 @@
+5.	Classification
+a.	What is Classification -Completed
+b.	How Classification differs from Regression
+c.	Logistic Regression-Completed
+d.	K-Nearest Neighbor (K-NN)
+e.	Support Vector Machine (SVM)
+f.	Kernel SVM
+g.	Naïve Bayes-Completed
+h.	Decision Tree Classification
+i.	Random Forest Classification
+j.	Hands on experience of each algorithm in Python
+k.	Evaluation of Classification Model using confusion Matrix
+
+6.	Clustering
+a.	What is Clustering?
+b.	How it is different from Classification algorithms?
+c.	K-Mean Clustering Algorithm.
+d.	Hierarchical Clustering Algorithm.
+e.	Applications of clustering in real world.
+f.	Hands-on with clustering techniques
+
+7.	Natural Language processing
+a.	What is NLP?
+b.	Applications of NLP.
+c.	NLP basics
+d.	NLP algorithms.
+e.	Hands-on with NLP
+8.	Deep Learning
+a.	Artificial Neural Networks
+b.	Convolution Neural Networks
+9.	Dimensionality Reduction and Model Selection
+a.	PCA
+b.	LDA
+c.	Kernel PCA
+d.	Model Selection 
+e.	XGBoost
+f.	Hands-on practice with Dimensionality reduction and model selection
+10.	Summary
+a.	Recap of what is done.
+b.	QA’s
+c.	More practice on Datasets…..
